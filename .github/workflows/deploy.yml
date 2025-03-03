@@ -12,8 +12,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.jyqgr.mongodb.net
-      MONGODB_USERNAME: ayavuzisik
-      MONGODB_PASSWORD: TdCJCm6WgZlyknt3 # overrides global env configurations - steps is the ultimate.
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }} # overrides global env configurations - steps is the ultimate.
       PORT: 8080
     runs-on: ubuntu-latest
     steps:
